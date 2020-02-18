@@ -1,6 +1,5 @@
 #!/bin/bash
 
-FLINK_HOME=/flink-1.8.1
 FLINK_JOB_MANAGER_SH=$FLINK_HOME/bin/jobmanager.sh
 FLINK_TASK_MANAGER_SH=$FLINK_HOME/bin/taskmanager.sh
 

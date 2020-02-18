@@ -1,8 +1,11 @@
 FROM centos:centos7
 MAINTAINER paul8263
+ARG FLINK_VERSION=1.9.2
+ARG SCALA_VERSION=2.11
+ARG FLINK_TAR_NAME=flink-${FLINK_VERSION}-bin-scala_${SCALA_VERSION}.tgz
 RUN yum install java-1.8.0-openjdk -y
-ENV FLINK_HOME=/flink-1.8.1
-ADD flink.tar.gz /
+ENV FLINK_HOME=/flink-${FLINK_VERSION}
+ADD ${FLINK_TAR_NAME} /
 COPY run.sh /root/
 EXPOSE 8088
 VOLUME $FLINK_HOME/conf
